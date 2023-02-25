@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "/home/siddarths/dev/c/spellcheck/inc/list.h"
+#include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
 
 int main()
 {
@@ -23,13 +23,13 @@ int main()
 
     //visualize_reverse(last_node(list));
 
-    remove_node("foo", list);
+    list = remove_node("foo", list);
     visualize(list);
 
-    remove_node("bar", list);
+    list = remove_node("bar", list);
     visualize(list);
 
-    remove_node("foggy", list);
+    list = remove_node("foggy", list);
     visualize(list);
 
     free_list(list);

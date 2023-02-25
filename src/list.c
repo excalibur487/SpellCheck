@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "/home/siddarths/dev/c/spellcheck/inc/list.h"
+#include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
 
 node* init_list(string word) {
 	node *new = malloc(sizeof(node));
@@ -72,8 +72,7 @@ node* search_node(string word, node *head) {
 	if (strcmp(word, head->word) == 0) {
 		return head;
 	}
-	search_node(word, head->next);
-	return NULL;
+	return search_node(word, head->next);
 }
 
 node* remove_node(string word, node *head) {
