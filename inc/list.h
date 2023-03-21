@@ -12,7 +12,10 @@ typedef struct node {
 	struct node *prev;
 } node;
 
-// Initializes list with given word
+
+/// @brief Initializes list with given word
+/// @param word The word to initialize list with
+/// @return The pointer to the head of the list
 node* init_list(string word);
 
 // Initializes node with given word and pointer to previous node

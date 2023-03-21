@@ -3,35 +3,41 @@
 
 int main()
 {
-    printf("Test\n");
-    node *list = init_list("foo");
+    char command;
+    scanf("%c", &command);
 
-    list = add_node("bar", list);
-    visualize(list);
+    node *head;
 
-    list = add_node("baz", list);
-    visualize(list);
+    switch (command)
+    {
+    case 'Q':
+        if (head != NULL)
+        {
+            free_list(head);
+        }
+        exit(0);
+        break;
+    case 'I':
+        char *string;
+        printf("Enter a string: ");
+        scanf("%s", string);
+        if (head != NULL)
+        {
+            free_list(head);
+        }
+        head = init_list(string);
+        break;
+    case 'A':
+        char *string;
+        printf("Enter a string: ");
+        scanf("%s", string);
+        if (head == NULL)
+        {
+            head = init_list(string);
+        }
+    default:
+        break;
+    }
 
-    list = add_node("broke", list);
-    visualize(list);
-
-    list = add_node("filter", list);
-    visualize(list);
-
-    list = add_node("foggy", list);
-    visualize(list);
-
-    //visualize_reverse(last_node(list));
-
-    list = remove_node("foo", list);
-    visualize(list);
-
-    list = remove_node("bar", list);
-    visualize(list);
-
-    list = remove_node("foggy", list);
-    visualize(list);
-
-    free_list(list);
     return 0;
 }
