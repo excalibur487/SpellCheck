@@ -11,7 +11,7 @@ string read_word(string word) {
 
 node* init_list(string word) {
 	node *new = malloc(sizeof(node));
-	new->word = read_word(word);
+	new->word = word; //read_word
 	new->next = NULL;
 	new->prev = NULL;
 	return new;
@@ -19,7 +19,7 @@ node* init_list(string word) {
 
 node* init_node(string word, node *prev) {
 	node *new = malloc(sizeof(node));
-	new->word = read_word(word);
+	new->word = word; //read_word
 	new->next = NULL;
 	new->prev = prev;
 	return new;
@@ -59,8 +59,11 @@ void free_list(node *head) {
 }
 
 node* add_node(string word, node *head) {
-	if (word == NULL || head == NULL) {
+	if (word == NULL) {
 		return NULL;
+	}
+	if (head == NULL) {
+		return init_list(word);
 	}
 	node* new = init_list(word);
 	head->prev = new;

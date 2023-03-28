@@ -4,7 +4,10 @@
 
 #define MAX_LENGTH 50
 
-// Define string type
+/**
+ * @brief Defing string type
+ * 
+ */
 typedef char *string;
 
 /**
@@ -13,8 +16,20 @@ typedef char *string;
  */
 typedef struct node
 {
+	/**
+	 * @brief Word data
+	 * 
+	 */
 	string word;
+	/**
+	 * @brief Pointer to next node in list
+	 * 
+	 */
 	struct node *next;
+	/**
+	 * @brief Pointer to previous node in list
+	 * 
+	 */
 	struct node *prev;
 } node;
 

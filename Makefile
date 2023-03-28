@@ -1,5 +1,6 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra -pedantic -std=c99 -Iinc
+LIBS = -lm
+CFLAGS = -g -Wall -Wextra -pedantic -std=c99 -Iinc 
 LDFLAGS = 
 
 SRC_DIR = src
@@ -12,7 +13,7 @@ OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
 TARGET = $(BIN_DIR)/main
 
 $(TARGET): $(OBJ)
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CC) $(LDFLAGS) $^ -o $@ $(LIBS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@

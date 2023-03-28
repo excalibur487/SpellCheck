@@ -7,12 +7,6 @@
 #include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
 
 /**
- * @brief Hash Table
- *
- */
-node *table[BUCKETS];
-
-/**
  * @brief Custom hash function
  *
  * @param word Word to be hashed
@@ -36,6 +30,15 @@ bool populate(const char *dictionary);
  * @return unsigned int Number of words in dictionary if loaded
  */
 unsigned int size(void);
+
+/**
+ * @brief Checks if a word is in the dictionary
+ * 
+ * @param word 
+ * @return true 
+ * @return false 
+ */
+bool check(char *word);
 
 /**
  * @brief Unloads dictionary from memory, returning true if successful, else false
