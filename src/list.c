@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
+#include <stdbool.h>
 #include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
 
 string read_word(string word) {
@@ -11,7 +13,8 @@ string read_word(string word) {
 
 node* init_list(string word) {
 	node *new = malloc(sizeof(node));
-	new->word = word; //read_word
+	strcpy(new->word, word);
+	//new->word = word;
 	new->next = NULL;
 	new->prev = NULL;
 	return new;
@@ -19,7 +22,8 @@ node* init_list(string word) {
 
 node* init_node(string word, node *prev) {
 	node *new = malloc(sizeof(node));
-	new->word = word; //read_word
+	strcpy(new->word, word);
+	//new->word = read_word(word);
 	new->next = NULL;
 	new->prev = prev;
 	return new;
@@ -54,7 +58,7 @@ void free_list(node *head) {
 		return;
 	}
 	free_list(head->next);
-	free(head->word);
+	//free(head->word);
 	free(head);
 }
 
@@ -83,6 +87,20 @@ node* search_node(string word, node *head) {
 		return head;
 	}
 	return search_node(word, head->next);
+}
+
+bool found(const char *myword, node *head)
+{
+    for (node *tmp = head; tmp != NULL; tmp = tmp->next)
+    {
+        //case insensitive
+        if (strcasecmp(tmp->word, myword) == 0)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 node* remove_node(string word, node *head) {

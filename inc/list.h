@@ -8,7 +8,7 @@
  * @brief Defing string type
  * 
  */
-typedef char *string;
+typedef char* string;
 
 /**
  * @brief Define node for a doubly linked list
@@ -20,7 +20,7 @@ typedef struct node
 	 * @brief Word data
 	 * 
 	 */
-	string word;
+	char word[MAX_LENGTH + 1];
 	/**
 	 * @brief Pointer to next node in list
 	 * 
@@ -69,6 +69,8 @@ node *add_node(string word, node *head);
 
 // Returns reference to the node
 node *search_node(string word, node *head);
+
+bool found(const char *myword, node *head);
 
 // Returns head to list with node containing word removed
 node *remove_node(string word, node *head);

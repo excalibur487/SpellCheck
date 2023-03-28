@@ -121,9 +121,9 @@ unsigned int size(void)
 
 bool check(char *word)
 {
-    unsigned int hashcode = hash(word);
+    int hashcode = hash(word);
 
-    return search_node(word, table[hashcode]);
+    return found(word, table[hashcode]);
 }
 
 bool free_dict(void)
@@ -251,7 +251,9 @@ int main(int argc, char *argv[])
     fclose(file);
 
     unsigned int n = size();
-    printf("Words in dictionary: %u\n", n);
+    printf("\nWORDS MISSPELLED:     %d\n", misspellings);
+    printf("WORDS IN DICTIONARY:  %d\n", n);
+    printf("WORDS IN TEXT:        %d\n", words);
 
     bool unloaded = free_dict();
 
