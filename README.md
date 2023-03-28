@@ -1,9 +1,9 @@
 # SpellCheck v1.0
 Text-based implementation of a spell checker in C
 
-How to use: ```bin/spellcheck [filename]```
+How to use: ```bin/spellcheck [filename] [optional dictionary]```
 
-Example: ```bin/spellcheck /home/siddarths/dev/c/SpellCheck/test/test-files/tolstoy.txt```
+Example: ```bin/spellcheck SpellCheck/test/test-files/tolstoy.txt```
 
 #Implementation
 
