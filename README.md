@@ -5,7 +5,7 @@ How to use: ```bin/spellcheck [filename] [optional dictionary]```
 
 Example: ```bin/spellcheck SpellCheck/test/test-files/tolstoy.txt```
 
-# Implementation
+## Implementation
 
 Uses a custom hash function to hash words and load them into a hash table. The hash table is an array of doubly-linked lists.
 
