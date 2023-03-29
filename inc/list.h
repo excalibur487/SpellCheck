@@ -6,29 +6,29 @@
 
 /**
  * @brief Defing string type
- * 
+ *
  */
-typedef char* string;
+typedef char *string;
 
 /**
  * @brief Define node for a doubly linked list
- * 
+ *
  */
 typedef struct node
 {
 	/**
 	 * @brief Word data
-	 * 
+	 *
 	 */
 	char word[MAX_LENGTH + 1];
 	/**
 	 * @brief Pointer to next node in list
-	 * 
+	 *
 	 */
 	struct node *next;
 	/**
 	 * @brief Pointer to previous node in list
-	 * 
+	 *
 	 */
 	struct node *prev;
 } node;
@@ -49,33 +49,88 @@ string read_word(string word);
  */
 node *init_list(string word);
 
-// Initializes node with given word and pointer to previous node
+/**
+ * @brief Initializes node with given word and pointer to previous node
+ *
+ * @param word Word to initialize node with
+ * @param prev Reference to previous node
+ * @return node* Reference to newly created node
+ */
 node *init_node(string word, node *prev);
 
-// Prints text-based visualization of the list
+/**
+ * @brief Prints text-based visualization of the list
+ *
+ * @param head Reference to the head of the list
+ */
 void visualize(node *head);
 
-// Returns the last node in list
+/**
+ * @brief Returns the last node in list
+ *
+ * @param head Reference to the head of the list
+ * @return node* Reference to the last node in list
+ */
 node *last_node(node *head);
 
-// Prints text-based visualization of the list in reverse order
+/**
+ * @brief Prints text-based visualization of the list in reverse order
+ *
+ * @param head Reference to the head of the list
+ */
 void visualize_reverse(node *head);
 
-// Frees the list
+/**
+ * @brief Frees heap usage of the list
+ *
+ * @param head Reference to the head of the list
+ */
 void free_list(node *head);
 
-// Appends a node to the start of the list
+/**
+ * @brief Appends a node to the start of the list
+ *
+ * @param word Node data
+ * @param head Reference to the head of the list
+ * @return node* Reference to the new head of the list
+ */
 node *add_node(string word, node *head);
 
 // Returns reference to the node
+/**
+ * @brief Searches for word in list
+ *
+ * @param word Word to search list for
+ * @param head Reference to the head of the list
+ * @return node* Reference to the node with word, if found
+ */
 node *search_node(string word, node *head);
 
+/**
+ * @brief Searches for word in list
+ *
+ * @param myword Word to search list for
+ * @param head Reference to the head of the list
+ * @return true If found
+ * @return false If not found in list
+ */
 bool found(const char *myword, node *head);
 
-// Returns head to list with node containing word removed
+/**
+ * @brief Returns head to list with node containing word removed
+ *
+ * @param word Word to be removed from list
+ * @param head Reference to the head of the list
+ * @return node* Reference to removed node
+ */
 node *remove_node(string word, node *head);
 
-// Removes the first node in list and returns reference to second node
+/**
+ * @brief Removes the head of a list
+ *
+ * @param head Reference to the head of the list
+ * @return node* Reference to second node
+ */
 node *remove_head(node *head);
 
 #endif

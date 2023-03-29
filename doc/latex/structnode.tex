@@ -21,19 +21,49 @@ Collaboration diagram for node\+:\nopagebreak
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structnode_a4125806067071b6cd1c47ffb1b5ae473}\label{structnode_a4125806067071b6cd1c47ffb1b5ae473}} 
-string {\bfseries word}
-\item 
-\mbox{\Hypertarget{structnode_aa3e8aa83f864292b5a01210f4453fcc0}\label{structnode_aa3e8aa83f864292b5a01210f4453fcc0}} 
-struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries next}
-\item 
-\mbox{\Hypertarget{structnode_a7ee3d227c728ce18a86e43ebc301046e}\label{structnode_a7ee3d227c728ce18a86e43ebc301046e}} 
-struct \mbox{\hyperlink{structnode}{node}} $\ast$ {\bfseries prev}
-\end{DoxyCompactItemize}
+char \mbox{\hyperlink{structnode_aea94f03944d58e7204a3004e7a602501}{word}} \mbox{[}M\+A\+X\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Word data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structnode_aa3e8aa83f864292b5a01210f4453fcc0}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to next node in list. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnode}{node}} $\ast$ \mbox{\hyperlink{structnode_a7ee3d227c728ce18a86e43ebc301046e}{prev}}
+\begin{DoxyCompactList}\small\item\em Pointer to previous node in list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Define node for a doubly linked list. 
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structnode_aa3e8aa83f864292b5a01210f4453fcc0}\label{structnode_aa3e8aa83f864292b5a01210f4453fcc0}} 
+\index{node@{node}!next@{next}}
+\index{next@{next}!node@{node}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ node\+::next}
+
+
+
+Pointer to next node in list. 
+
+\mbox{\Hypertarget{structnode_a7ee3d227c728ce18a86e43ebc301046e}\label{structnode_a7ee3d227c728ce18a86e43ebc301046e}} 
+\index{node@{node}!prev@{prev}}
+\index{prev@{prev}!node@{node}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structnode}{node}}$\ast$ node\+::prev}
+
+
+
+Pointer to previous node in list. 
+
+\mbox{\Hypertarget{structnode_aea94f03944d58e7204a3004e7a602501}\label{structnode_aea94f03944d58e7204a3004e7a602501}} 
+\index{node@{node}!word@{word}}
+\index{word@{word}!node@{node}}
+\doxysubsubsection{\texorpdfstring{word}{word}}
+{\footnotesize\ttfamily char node\+::word\mbox{[}M\+A\+X\+\_\+\+L\+E\+N\+G\+TH+1\mbox{]}}
+
+
+
+Word data. 
 
 
 

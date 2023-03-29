@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SpellCheck: SpellCheck</title>
+<title>SpellCheck: SpellCheck v1.0</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,10 +63,15 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">SpellCheck </div>  </div>
+<div class="title">SpellCheck v1.0 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Text-based implementation of a spell checker in C </p>
+<div class="textblock"><p>Text-based implementation of a spell checker in C</p>
+<p>How to use: <code>bin/spellcheck [filename] [optional dictionary]</code></p>
+<p>Example: <code>bin/spellcheck SpellCheck/test/test-files/tolstoy.txt</code></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Implementation</h1>
+<p>Uses a custom hash function to hash words and load them into a hash table. The hash table is an array of doubly-linked lists. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -26,25 +26,25 @@ bool populate(const char *dictionary);
 
 /**
  * @brief Returns number of words in dictionary if loaded, else 0 if not yet loaded
- * 
+ *
  * @return unsigned int Number of words in dictionary if loaded
  */
 unsigned int size(void);
 
 /**
- * @brief Checks if a word is in the dictionary
- * 
- * @param word 
- * @return true 
- * @return false 
+ * @brief Checks the spelling of a word by searching for it in the dictionary
+ *
+ * @param word Word to check spelling of
+ * @return true If spelled correctly
+ * @return false If misspelled
  */
 bool check(char *word);
 
 /**
  * @brief Unloads dictionary from memory, returning true if successful, else false
- * 
- * @return true 
- * @return false 
+ *
+ * @return true If dictionary was successfully freed
+ * @return false If error was encountered while freeing dictionary
  */
 bool free_dict(void);
 
