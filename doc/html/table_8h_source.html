@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SpellCheck
    </div>
-   <div id="projectbrief">C.</div>
+   <div id="projectbrief">Spellchecker in C</div>
   </td>
  </tr>
  </tbody>
@@ -70,27 +70,34 @@ $(function() {
 <div class="title">table.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Define hash table for strings</span></div>
+<a href="table_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Define hash table for strings</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef TABLE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define TABLE_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define BUCKETS 777777</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="table_8h.html#a45b0c073f8ca87df2e2ceacb693eecb8">    5</a></span>&#160;<span class="preprocessor">#define BUCKETS 777777</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;/home/siddarths/dev/c/SpellCheck/inc/list.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hash(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structnode.html#aea94f03944d58e7204a3004e7a602501">word</a>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> populate(<span class="keyword">const</span> <span class="keywordtype">char</span> *dictionary);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">bool</span> check(<span class="keywordtype">char</span> *<a class="code" href="structnode.html#aea94f03944d58e7204a3004e7a602501">word</a>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> free_dict(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">/home/siddarths/dev/c/SpellCheck/inc/list.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="table_8h.html#a46760440567d768828e2708232efd3c8">hash</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structnode.html#a2ccee0c9aad5d5e26fea142665c120be">word</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="table_8h.html#a8f0bde9966d1adfe43c89a8f540bc84c">populate</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *dictionary);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="table_8h.html#a2d026b892926536b1870d23862d01625">size</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="table_8h.html#a12a9b5f98e7e254cb10055595d985881">check</a>(<span class="keywordtype">char</span> *<a class="code" href="structnode.html#a2ccee0c9aad5d5e26fea142665c120be">word</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="table_8h.html#a6a42459d00c987f7032ebcd53e1337f0">free_dict</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructnode_html_aea94f03944d58e7204a3004e7a602501"><div class="ttname"><a href="structnode.html#aea94f03944d58e7204a3004e7a602501">node::word</a></div><div class="ttdeci">char word[MAX_LENGTH+1]</div><div class="ttdoc">Word data.</div><div class="ttdef"><b>Definition:</b> list.h:23</div></div>
+<div class="ttc" id="atable_8h_html_a6a42459d00c987f7032ebcd53e1337f0"><div class="ttname"><a href="table_8h.html#a6a42459d00c987f7032ebcd53e1337f0">free_dict</a></div><div class="ttdeci">bool free_dict(void)</div><div class="ttdoc">Unloads dictionary from memory, returning true if successful, else false.</div><div class="ttdef"><b>Definition:</b> table.c:128</div></div>
+<div class="ttc" id="atable_8h_html_a2d026b892926536b1870d23862d01625"><div class="ttname"><a href="table_8h.html#a2d026b892926536b1870d23862d01625">size</a></div><div class="ttdeci">unsigned int size(void)</div><div class="ttdoc">Returns number of words in dictionary if loaded, else 0 if not yet loaded.</div><div class="ttdef"><b>Definition:</b> table.c:116</div></div>
+<div class="ttc" id="atable_8h_html_a12a9b5f98e7e254cb10055595d985881"><div class="ttname"><a href="table_8h.html#a12a9b5f98e7e254cb10055595d985881">check</a></div><div class="ttdeci">bool check(char *word)</div><div class="ttdoc">Checks the spelling of a word by searching for it in the dictionary.</div><div class="ttdef"><b>Definition:</b> table.c:121</div></div>
+<div class="ttc" id="atable_8h_html_a8f0bde9966d1adfe43c89a8f540bc84c"><div class="ttname"><a href="table_8h.html#a8f0bde9966d1adfe43c89a8f540bc84c">populate</a></div><div class="ttdeci">bool populate(const char *dictionary)</div><div class="ttdoc">Populates hash table with words in dictionary.</div><div class="ttdef"><b>Definition:</b> table.c:47</div></div>
+<div class="ttc" id="astructnode_html_a2ccee0c9aad5d5e26fea142665c120be"><div class="ttname"><a href="structnode.html#a2ccee0c9aad5d5e26fea142665c120be">node::word</a></div><div class="ttdeci">char word[MAX_LENGTH+1]</div><div class="ttdoc">Word data.</div><div class="ttdef"><b>Definition:</b> list.h:25</div></div>
+<div class="ttc" id="alist_8h_html"><div class="ttname"><a href="list_8h.html">list.h</a></div></div>
+<div class="ttc" id="atable_8h_html_a46760440567d768828e2708232efd3c8"><div class="ttname"><a href="table_8h.html#a46760440567d768828e2708232efd3c8">hash</a></div><div class="ttdeci">unsigned int hash(const char *word)</div><div class="ttdoc">Custom hash function.</div><div class="ttdef"><b>Definition:</b> table.c:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

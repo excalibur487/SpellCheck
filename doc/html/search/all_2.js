@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spellcheck_20v1_2e0_3',['SpellCheck v1.0',['../md_README.html',1,'']]]
+  ['check_2',['check',['../table_8h.html#a12a9b5f98e7e254cb10055595d985881',1,'check(char *word):&#160;table.c'],['../table_8c.html#a12a9b5f98e7e254cb10055595d985881',1,'check(char *word):&#160;table.c']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prev_2',['prev',['../structnode.html#a7ee3d227c728ce18a86e43ebc301046e',1,'node']]]
+  ['buckets_1',['BUCKETS',['../table_8h.html#a45b0c073f8ca87df2e2ceacb693eecb8',1,'table.h']]]
 ];
