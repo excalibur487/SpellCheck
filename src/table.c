@@ -30,7 +30,10 @@ unsigned int hash(const char *word)
         //weighted sum of all letters, i capped to 4 because of memory limitations
         if (((toupper(word[i]) - 'A') > 0) && (i < 4))
         {
-            hashcode += (toupper(word[i]) - 'A') * (int)pow(26.0, i);
+	    int mul = 26;
+	    for (int j = 0; j < i - 1; j++)
+		mul *= 26;
+            hashcode += (toupper(word[i]) - 'A') * mul;
         }
         else
         {
