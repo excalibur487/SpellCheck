@@ -6,10 +6,10 @@
 #include <strings.h>
 #include <math.h>
 
-#include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
-#include "/home/siddarths/dev/c/SpellCheck/inc/table.h"
+#include "/Users/siddarthshinde/dev/projects/SpellCheck/inc/list.h"
+#include "/Users/siddarthshinde/dev/projects/SpellCheck/inc/table.h"
 
-#define DICTIONARY "/home/siddarths/dev/c/SpellCheck/test/test-files/large.txt"
+#define DICTIONARY "/Users/siddarthshinde/dev/projects/SpellCheck/test/test-files/large.txt"
 
 /**
  * @brief Hash Table
@@ -27,12 +27,12 @@ unsigned int hash(const char *word)
 
     for (int i = 0; i < length; i++)
     {
-        //weighted sum of all letters, i capped to 4 because of memory limitations
+        // weighted sum of all letters, i capped to 4 because of memory limitations
         if (((toupper(word[i]) - 'A') > 0) && (i < 4))
         {
-	    int mul = 26;
-	    for (int j = 0; j < i - 1; j++)
-		mul *= 26;
+            int mul = 26;
+            for (int j = 0; j < i - 1; j++)
+                mul *= 26;
             hashcode += (toupper(word[i]) - 'A') * mul;
         }
         else
@@ -89,7 +89,7 @@ bool populate(const char *dictionary)
 
             hashcode = hash(word);
             table[hashcode] = add_node(word, table[hashcode]);
-            //visualize(table[hashcode]);
+            // visualize(table[hashcode]);
             words++;
             index = 0;
         }
@@ -100,7 +100,7 @@ bool populate(const char *dictionary)
 
             hashcode = hash(word);
             table[hashcode] = add_node(word, table[hashcode]);
-            //visualize(table[hashcode]);
+            // visualize(table[hashcode]);
             words++;
             index = 0;
         }
@@ -200,7 +200,8 @@ int main(int argc, char *argv[])
             if (index > MAX_LENGTH)
             {
                 // Consume remainder of alphabetical string
-                while (fread(&c, sizeof(char), 1, file) && isalpha(c));
+                while (fread(&c, sizeof(char), 1, file) && isalpha(c))
+                    ;
 
                 // Prepare for new word
                 index = 0;
@@ -211,7 +212,8 @@ int main(int argc, char *argv[])
         else if (isdigit(c))
         {
             // Consume remainder of alphanumeric string
-            while (fread(&c, sizeof(char), 1, file) && isalnum(c));
+            while (fread(&c, sizeof(char), 1, file) && isalnum(c))
+                ;
 
             // Prepare for new word
             index = 0;

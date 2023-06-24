@@ -3,7 +3,7 @@
 #include <string.h>
 #include <strings.h>
 #include <stdbool.h>
-#include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
+#include "/Users/siddarthshinde/dev/projects/SpellCheck/inc/list.h"
 
 string read_word(string word) {
 	string read = malloc(sizeof(word));

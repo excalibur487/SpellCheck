@@ -4,7 +4,7 @@
 
 #define BUCKETS 777777
 
-#include "/home/siddarths/dev/c/SpellCheck/inc/list.h"
+#include "/Users/siddarthshinde/dev/projects/SpellCheck/inc/list.h"
 
 /**
  * @brief Custom hash function
